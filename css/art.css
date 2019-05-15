@@ -1,0 +1,161 @@
+body {	
+    font-family: "SF Pro Text", "Myriad Set Pro", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+    font-size: 18px;
+    line-height: 34px;
+    color: black;
+    margin: 0;
+    background-image: url("./images/astronomy-constellation-dark-998641.jpg");
+    background-size: 100%;
+  }
+  .logo {
+    margin-left: -50px;
+  }
+  .logo img {
+    width: 75%;
+    height: auto;
+  }
+
+  #welcome {
+    margin-top: 50px;
+    font-size: 40px;
+    font-weight: bold;
+    width: 100%;
+    letter-spacing: .5px;
+    text-align: center;
+  }
+  
+
+footer,
+.push {
+  height: 50px;
+}
+/* footer */
+footer {
+  padding: 10px 0;
+  clear: both;
+  font-size: 12px;
+  color: #fff;
+  text-align: center;
+  background: black;
+  /* border-top: 8px solid #4aaaa5; */
+}
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 8vh;
+  margin-top: 20px;
+  background-color: transparent;
+}
+a {
+  float: right;
+}
+.logo {
+  /* text-transform: uppercase; */
+  letter-spacing: 5px;
+  font-size: 20px;
+}
+
+a {
+  font-family:"SF Pro Text", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  font-size: 14px;
+  color: rgb(250, 249, 249);
+  text-decoration: none;
+}
+a:hover {
+  color: rgb(253, 236, 0);
+
+}
+.nav-links {
+  display: flex;
+  justify-content: space-around;
+  width: 35%;
+}
+.nav-links li{
+  list-style: none;
+}
+.nav-links a{
+  text-decoration: none;
+  letter-spacing: 3px;
+  font-weight: bold;
+}
+
+/* .container {
+  width: 100%;
+  max-width: 960px;
+  margin: auto;
+  clear: both;
+}
+#main-container {
+  display: flex;
+  flex-direction: column;
+  background: transparent;
+  text-align: center;
+} */
+
+#main-container {
+  padding-top: 20px;
+  text-align: center;
+  background: transparent;
+}
+
+.main-section {
+  display: inline-block;
+  width: 100%;
+  max-width: 1000px;
+  padding: 30px, 0px, 30px, 30px;
+  margin: 0;
+  /* background: #f6f7f8; */
+  /* border: 1px solid black; */
+}
+
+h1,
+h2,
+h3 {
+  font-family: "SF Pro Text", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  font-weight: 700;
+  letter-spacing: 1px;
+  /* color: rgb(230, 230, 230); */
+  color: rgb(247, 247, 247);
+  
+}
+
+img {
+  margin-bottom: 150px;
+  width: 100%;
+  height: auto;
+  max-width: 1000px;
+}
+
+h1 {
+  padding-bottom: 20px;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 49px;
+  letter-spacing: 6px;
+
+  /* border-bottom: 2px solid black; */
+  float: left;
+}
+li {
+  width: 100%;
+  float: left;
+}
+img.home {
+  width: 40%;
+}
+img.home:hover {
+  transform: scale(1.1);
+}
+
+div#main-container.container {
+  width: 100%;
+  float: left;
+}
+
+
+@media screen and (max-width: 750px) {
+  .logo {
+    margin-left: 0px;
+  }
+}
