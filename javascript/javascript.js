@@ -46,7 +46,8 @@ const navSlide = () => {
             if (link.style.animation) {
                 link.style.animation = '';
             } else {
-                link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 1.5}s`;
+                link.style.animation = `navLinkFade 0.8s ease forwards ${index / 4 + .5}s`;
+                
             }
         });
         //burger animation
