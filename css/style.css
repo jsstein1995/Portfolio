@@ -10,8 +10,8 @@ html {
     line-height: 34px;
     color:white;
     margin: 0;
-    /* background: linear-gradient(0deg, rgb(248, 180, 180), rgb(207, 236, 255),rgb(248, 180, 180)); */
-    background-image: url("./images/IMG_0837.JPG");
+    background: linear-gradient(0deg, rgb(252, 215, 215), rgb(169, 204, 228));
+    /* background-image: url("./images/IMG_0837.JPG"); */
     /* background-repeat: no-repeat;
   background-size: 100% 490px; */
   background-color: rgb(227, 227, 227);
@@ -217,8 +217,10 @@ html {
   }
   
   div.contact-background {
-    background: url("./images/sunset_cropped.v2.png");
-    background-size: 100%;
+    /* background: url("./images/sunset_cropped.v2.png");
+    width: 100%;
+    height: auto; */
+    background: linear-gradient(0deg, rgb(252, 215, 215), rgb(204, 224, 238));
     background-repeat: no-repeat;
   }
   form#contact-form {
@@ -334,8 +336,8 @@ html {
     font-size: 18px;
     color: #fff;
     cursor: pointer;
-    background: black;
-    border: 0 none;
+    background: transparent;
+    border: 2px solid white;
     border-radius: 5%;
   }
   input[type=submit]:hover {
@@ -471,7 +473,9 @@ html {
   
   /* FADING IMAGES
   ====================================================================================================== */
-  
+  /* .work1 {
+    margin-right: -500px;
+  } */
   
   .work {
     margin-bottom: 45px;
@@ -612,9 +616,9 @@ html {
     margin: 0% 0% 3.0% 1.5%;
   }
   
-  .animation-element.slide-left.testimonial img {
+  /* .animation-element.slide-left.testimonial img {
     box-shadow: 0px 1px 3px rgba(51, 51, 51, 0.5);
-  }
+  } */
   
   
   
