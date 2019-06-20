@@ -581,6 +581,13 @@ html {
   .nav-active{
     transform: translateX(50%);
   }
+
+  @media screen and (max-width: 700px) {
+    #codeLink {
+      display: none;
+    }
+  }
+
   
   /* .wrapper {
     position: relative;
