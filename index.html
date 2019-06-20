@@ -7,6 +7,15 @@
     <title>Jackson Stein</title>
     <link rel="stylesheet" type="text/css" href="./css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!-- Alertify links -->
+<!-- CSS -->
+<link rel="stylesheet" href=""/>
+<!-- Default theme -->
+<link rel="stylesheet" href=""/>
+<!-- Semantic UI theme -->
+<link rel="stylesheet" href=""/>
+<!-- Bootstrap theme -->
+<link rel="stylesheet" href=""/>
 </head>
 
 <body>
@@ -262,25 +271,31 @@
             <section class="main-section" id="section2">
                 <h1>04_Contact</h1>
                 <br>
-                <form id="contact-form">
+                <form id="contact-form"
+                    action="https://formspree.io/jsstein1995@gmail.com" method="POST">
 
                     <label for="name">Name</label>
-                    <input type="text" id="name" name="name" placeholder="John Smith" required="required">
-
+                    <input type="text" id="inputName" name="name" placeholder="John Smith" required="required">
 
                     <label for="email">Email</label>
-                    <input type="email" id="email" name="email" placeholder="example@gmail.com" required="required">
+                    <input type="email" id="inputEmail" name="_replyto" placeholder="example@gmail.com" required="required">
 
                     <label for="message">Message</label>
-                    <textarea id="message" name="message" required="required"></textarea>
+                    <textarea id="message" name="inputMessage" required="required"></textarea>
 
-                    <input type="submit" id="submit">
+                    <input type="submit" id="submit" value="Send">
+
+                    <!-- Alertify not working: FormSpree not free anymore -->
+                    <!-- <input type="text" name="_gotcha" class="display-none">
+                        <div class="text-center">
+                            <button class="btn btn-default" type="submit" id="email-submit-btn" value="Send">
+                                Submit
+                            </button>
+                        </div> -->
                 </form>
-
                 <br>
                 <br>
             </section>
-
             <footer>
                 <div class="container">
                     Jackson Stein. All rights reserved;
@@ -289,10 +304,16 @@
         </div>
     </div>
 
+<!-- Alertify.js -->
+<script src="//cdn.jsdelivr.net/npm/alertifyjs@1.11.4/build/alertify.min.js"></script>
 
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"
         integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script type="text/javascript" src='./javascript/javascript.js'></script>
+    <script type="text/javascript" src='./javascript/form.js'></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.0.min.js"></script>
+
 
 </body>
 
