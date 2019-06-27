@@ -10,11 +10,11 @@ html {
     line-height: 34px;
     color:white;
     margin: 0;
-    background: linear-gradient(0deg, rgb(98, 0, 255), rgb(119, 198, 255));
+    /* background: linear-gradient(0deg, rgb(98, 0, 255), rgb(119, 198, 255)); */
     /* background-image: url("./images/IMG_0837.JPG"); */
     /* background-repeat: no-repeat;
   background-size: 100% 490px; */
-  background-color: rgb(227, 227, 227);
+  background-color: rgb(255, 255, 255);
   background-size: 100% 2100px;
   background-repeat: no-repeat;
   }
@@ -24,7 +24,7 @@ html {
     box-sizing: border-box;
     margin: 0;
   }
-  
+ 
   /* sticky footer styling */
   
   /* https://css-tricks.com/snippets/css/sticky-footer/ */
@@ -103,7 +103,7 @@ html {
     font-weight: 700;
     letter-spacing: 1px;
     /* color: rgb(230, 230, 230); */
-    color: white;
+    color: black;
     
   }
   
@@ -163,7 +163,7 @@ html {
   .burger div{
     width: 25px;
     height: 3px;
-    background-color: white;
+    background-color: black;
     margin: 5px;
     transition: all 0.3s;
   }
@@ -221,9 +221,16 @@ html {
     line-height: 22px;
   }
   
+  .dark-title {
+    color: white;
+  }
   div.outer {
     background-color: rgb(0, 0, 0);
     padding-bottom: 60px;
+  }
+
+  a#back-end-link {
+    color: white;
   }
 
   a#back-end-link:hover {
@@ -239,7 +246,8 @@ html {
     width: 100%;
     height: auto; */
     padding-top: 30px;
-    background: linear-gradient(0deg, rgb(119, 155, 255),  rgb(98, 0, 255));
+    /* background: linear-gradient(0deg, rgb(119, 155, 255),  rgb(98, 0, 255)); */
+    background-color: white;
     background-repeat: no-repeat;
   }
   form#contact-form {
@@ -343,12 +351,12 @@ html {
   input[type=text],
   input[type=email],
   textarea {
-    color: white;
+    color: black;
     height: 45px;
     padding: 10px;
     font-size: 16px;
     background-color: transparent;
-    border: 2px solid white;
+    border: 2px solid black;
   }
 
   ::placeholder {
@@ -365,15 +373,19 @@ html {
   textarea {
     height: 200px;
   }
+
+  td.a {
+    color: white;
+  }
   
   input[type=submit] {
     padding: 10px 30px;
     margin-top: 30px;
     font-size: 18px;
-    color: #fff;
+    color: black;
     cursor: pointer;
     background: transparent;
-    border: 2px solid white;
+    border: 2px solid black;
     border-radius: 5%;
   }
   input[type=submit]:hover {
@@ -438,7 +450,7 @@ html {
     font-family:"SF Pro Text", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
     font-size: 16px;
     /* color: rgb(230, 230, 230); */
-    color: white;
+    color: black;
     text-decoration: none;
     letter-spacing: 3px;
     font-weight: bold;
@@ -461,7 +473,7 @@ html {
     font-family:"SF Pro Text", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
     font-size: 16px;
     /* color: rgb(230, 230, 230); */
-    color: white;
+    color: black;
     text-decoration: none;
   }
   
