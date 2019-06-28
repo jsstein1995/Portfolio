@@ -293,6 +293,27 @@ html {
     /* background: #f6f7f8; */
     /* border: 1px solid black; */
   }
+
+  .work4 {
+    text-align: center;
+  }
+
+  .boost-game, .card {
+    display: inline;
+  }
+
+  .card-title {
+    font-size: 20px;
+    color: black;
+  }
+  .card-text {
+    font-size: 12px;
+    color: black;
+  }
+
+  .playMe {
+    color: rgb(49, 97, 255);
+  }
   
   img {
     border-radius: 10px;
