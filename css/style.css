@@ -25,6 +25,12 @@ html {
     margin: 0;
   }
  
+  canvas {
+    position: absolute;
+    left:0;
+    top:0;
+    z-index:-1;
+  }
   /* sticky footer styling */
   
   /* https://css-tricks.com/snippets/css/sticky-footer/ */
