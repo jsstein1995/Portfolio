@@ -28,8 +28,14 @@ html {
   canvas {
     position: absolute;
     left:0;
-    top:0;
-    z-index:-1;
+    top:0px;
+    z-index:-2;
+  }
+
+  #clickMe {
+    text-align: center;
+    color: grey;
+    opacity: .4;
   }
   /* sticky footer styling */
   
@@ -530,18 +536,23 @@ html {
   }
   
   #welcome {
-    margin-top: 100px;
+    margin-top: 50px;
     font-size: 40px;
     font-weight: bold;
     width: 100%;
     letter-spacing: .5px;
   }
   
-  .seeMore {
+  /* .seeMore {
     display: inline;
     justify-content: space-around;
     float: right;
-  }
+  } */
+
+  .unselectable {
+    -moz-user-select:none;
+    -webkit-user-select:none;
+}
   
   /* .row {
     display: noflex;

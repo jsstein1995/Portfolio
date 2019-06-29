@@ -9,7 +9,7 @@ var current;
 var previous;
 
 function setup() {
-  createCanvas(windowWidth, 700);
+  createCanvas(windowWidth, 500);
   current = createVector(0,0);
   previous = createVector(0,0);
 };
@@ -99,7 +99,7 @@ function Particle(position, force, hue) {
   this.position = createVector(position.x, position.y);
   this.velocity = createVector(force.x, force.y);
   this.drag = 0.95;
-  this.lifespan = 255;
+  this.lifespan = 100;
 }
 
 Particle.prototype.update = function() {
@@ -120,5 +120,7 @@ Particle.prototype.display = function(other) {
   // If we need to draw a line
   if (other) {
     line(this.position.x, this.position.y, other.position.x, other.position.y);
+    // line(this.position.x, this.position.y, other.position.x, other.position.y);
+    // line(this.position.x, this.position.y, other.position.x, other.position.y);
   }
 }
