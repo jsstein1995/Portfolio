@@ -1,6 +1,6 @@
 var r = Math.floor(Math.random() * 255); 
 var g = Math.floor(Math.random() * 255); 
-var b = (255); 
+var b = 255;
 
 let bubbles = [];
 
@@ -9,7 +9,7 @@ function setup() {
 }
 
 function mousePressed() {
-  let r = random(1, 300);
+  let r = random(30, 300);
   let b = new Bubble(mouseX, mouseY, r);
   bubbles.push(b);
 }
@@ -46,7 +46,7 @@ class Bubble {
   show() {
     noStroke();
     strokeWeight(4);
-    fill(r, g, b, 100);
+    fill(r, g, b, 60);
     ellipse(this.x, this.y, this.r * 2);
   }
 }
