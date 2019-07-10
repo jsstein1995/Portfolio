@@ -26,7 +26,8 @@ html {
   }
  
   canvas {
-    position: absolute;
+    position: fixed;
+    height: 700px !important;
     left:0;
     top:0px;
     z-index:-2;
@@ -142,7 +143,7 @@ html {
     justify-content: space-around;
     align-items: center;
     min-height: 8vh;
-    margin-top: 20px;
+    padding-top: 20px;
     background-color: transparent;
   }
   .logo {
@@ -225,7 +226,7 @@ html {
     margin-bottom: 20px;
     background: transparent;
   }
-  
+
   h3,
   .sidebar h2 {
     padding-bottom: 20px;
@@ -275,8 +276,8 @@ html {
   }
   
   .social {
-    width: 62px;
-    height: 62px;
+    width: 75px;
+    height: 75px;
     margin-top: 8px;
     margin-right: 5px;
     transform: scale(.8);
@@ -326,9 +327,9 @@ html {
     color: black;
   }
 
-  .playMe {
+  /* .playMe {
     color: rgb(49, 97, 255);
-  }
+  } */
   
   img {
     border-radius: 10px;
@@ -392,7 +393,7 @@ html {
     padding: 10px;
     font-size: 16px;
     background-color: transparent;
-    border: 2px solid black;
+    border: 1.2px solid black;
   }
 
   ::placeholder {
@@ -415,14 +416,19 @@ html {
   }
   
   input[type=submit] {
-    padding: 10px 30px;
+    display: inline-block;
+    background-color: #1eb6ff; 
+    padding-bottom: 15px;
+    padding-top: 15px;
+    padding-right: 20px;
+    padding-left: 20px;
     margin-top: 30px;
+    width: 150px;
     font-size: 18px;
-    color: black;
+    color: white;
     cursor: pointer;
-    background: transparent;
-    border: 2px solid black;
-    border-radius: 5%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 35px;
   }
   input[type=submit]:hover {
     opacity: .8;
@@ -442,44 +448,6 @@ html {
   #aboutMeDiv {
     text-align: center;
   }
-  
-  /* .graphics{
-    text-align: center;
-  }
-  .artComment {
-    margin: auto;
-    font-size: 12px;
-    line-height: 14px;
-    width: 800px;
-  } */
-  
-  /* .overlay {
-    position: relative;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 100%;
-    width: 100%;
-    opacity: 0;
-    transition: .5s ease;
-  } */
-  
-  /* .graphics:hover .overlay {
-    opacity: 1;
-  } */
-  
-  /* .text {
-    color: white;
-    font-size: 20px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    text-align: center;
-  } */
   
   label {
     float: left;
@@ -509,7 +477,7 @@ html {
     font-family:"SF Pro Text", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
     font-size: 16px;
     /* color: rgb(230, 230, 230); */
-    color: black;
+    color: white;
     text-decoration: none;
   }
   
@@ -540,8 +508,9 @@ html {
   
   #welcome {
     color: white;
-    margin-top: 50px;
-    font-size: 40px;
+    margin-top: 100px;
+    margin-bottom: 40px;
+    font-size: 60px;
     font-weight: bold;
     width: 100%;
     letter-spacing: .5px;
@@ -573,15 +542,26 @@ html {
     opacity: 1;
   }
   
-  work:hover {
+  /* .work:hover {
     opacity: 0.8;
     filter: alpha(opacity=50); 
-  }
+  } */
   
   #codeLink {
+    background-color: #1eb6ff; 
+    color: white;
+    letter-spacing: 0.2;
+    display: inline-block;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    padding-right: 20px;
+    padding-left: 20px;
+    margin-top: 150px;
     position: absolute;
-    margin-top: 10px;
-    margin-left: -30px;
+    margin-left: -250px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 35px;
+    width: 150px;
   }
   #codeLink:hover {
     cursor: pointer;
@@ -589,6 +569,22 @@ html {
   }
   .hidden {
     display: none;
+  }
+  #playMe {
+    background-color: #1eb6ff; 
+    color: white;
+    letter-spacing: 0.2;
+    display: inline-block;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    padding-right: 20px;
+    padding-left: 20px;
+    margin-top: 140px;
+    position: absolute;
+    margin-left: -250px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 35px;
+    width: 150px;
   }
   
   /* MOBILE RESPONSIVE MEDIA QUERIES
@@ -638,6 +634,9 @@ html {
 
   @media screen and (max-width: 700px) {
     #codeLink {
+      display: none;
+    }
+    .languages {
       display: none;
     }
   }

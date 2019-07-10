@@ -4,7 +4,7 @@ body {
     line-height: 34px;
     color: black;
     margin: 0;
-    background-image: url("./images/astronomy-constellation-dark-998641.jpg");
+    /* background-image: url("./images/astronomy-constellation-dark-998641.jpg"); */
     background-size: 100%;
   }
   .logo {
@@ -14,6 +14,9 @@ body {
     width: 75%;
     height: auto;
   }
+  #quote{
+    margin-top: -100px;
+  }
 
   #welcome {
     margin-top: 50px;
@@ -22,6 +25,12 @@ body {
     width: 100%;
     letter-spacing: .5px;
     text-align: center;
+    color: black;
+  }
+
+  #dali {
+    margin-left: 500px;
+    color: black;
   }
   
 
@@ -34,16 +43,16 @@ footer {
   padding: 10px 0;
   clear: both;
   font-size: 12px;
-  color: #fff;
+  color: black;
   text-align: center;
-  background: black;
+  background: transparent;
   /* border-top: 8px solid #4aaaa5; */
 }
 nav {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  min-height: 8vh;
+  min-height: 2vh;
   margin-top: 20px;
   background-color: transparent;
 }
@@ -59,7 +68,7 @@ a {
 a {
   font-family:"SF Pro Text", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
   font-size: 14px;
-  color: rgb(250, 249, 249);
+  color: black;
   text-decoration: none;
 }
 a:hover {
@@ -100,7 +109,7 @@ a:hover {
 }
 
 .main-section {
-  display: inline-block;
+  display: flex;
   width: 100%;
   max-width: 1000px;
   padding: 30px, 0px, 30px, 30px;
@@ -119,16 +128,21 @@ h3 {
   color: rgb(247, 247, 247);
   
 }
-
+#red_giant, #black_earth, #landscape, #syd, #tdl, #whale, #olive {
+  margin-left: 300px;
+  margin-right: 300px;
+  /* box-shadow: 5px 10px #888888; */
+  box-shadow: 10px 10px 8px #888888;
+}
 img {
   margin-bottom: 150px;
   width: 100%;
   height: auto;
-  max-width: 1000px;
+  max-width: 600px;
 }
 
 h1 {
-  padding-bottom: 20px;
+  padding-bottom: 10px;
   font-size: 20px;
   font-weight: 500;
   line-height: 49px;
@@ -142,7 +156,9 @@ li {
   float: left;
 }
 img.home {
-  width: 40%;
+  width: 8%;
+  float: right;
+  margin-right: 10px;
 }
 img.home:hover {
   transform: scale(1.1);
@@ -157,5 +173,9 @@ div#main-container.container {
 @media screen and (max-width: 750px) {
   .logo {
     margin-left: 0px;
+  }
+  #red_giant, #black_earth, #landscape, #syd, #tdl, #whale, #olive {
+    margin-left: 0;
+    margin-right: 0;
   }
 }

@@ -9,25 +9,14 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.0/p5.js"></script>
-    <script language="javascript" type="text/javascript" src="./javascript/background.js"></script>
-    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" 
-        crossorigin="anonymous"> -->
-<!-- Alertify links -->
-<!-- CSS -->
-<link rel="stylesheet" href=""/>
-<!-- Default theme -->
-<link rel="stylesheet" href=""/>
-<!-- Semantic UI theme -->
-<link rel="stylesheet" href=""/>
-<!-- Bootstrap theme -->
-<link rel="stylesheet" href=""/>
-</head>
+    <!-- <script language="javascript" type="text/javascript" src="./javascript/landing.js"></script> -->
 
+</head>
+<div id="landing-background">
 <body unselectable="on" class="unselectable">
     <nav unselectable="on" class="unselectable">
         <div class="logo">
-            <img src="./css/images/Logo_black.png" alt="Logo">
+            <img src="./css/images/Asset 2.png" alt="Logo">
         </div>
         <ul class="nav-links">
             <li><a href="#projects">Projects</a></li>
@@ -42,7 +31,6 @@
             <div class="line3"></div>
         </div>
     </nav>
-
     <!-- <div id="sidebar" class="hidden">
         <aside class="columns sidenav">
             <div class="side-content">
@@ -61,29 +49,31 @@
         </aside>
     </div> -->
     <br>
-    
     <div unselectable="on" class="unselectable" id="main-container" class="container">
         <section class="main-section">
-            <div id ="clickMe">(click here please! Refresh if you must)</div>
+            <!-- <div id ="clickMe">(click here please! Refresh if you must)</div> -->
             <h1 id="welcome">Hi, I'm Jack. I design & build user interfaces!</h1>
             <a href="https://github.com/jsstein1995" target="_blank">
                 <img src="./css/images/Octocat.png" class="social" alt="Github">
             </a>
             <a href="https://www.linkedin.com/in/jackson-stein/" target="_blank">
-                <img src="./css/images/In-Blue-72@2x.png" class="social" alt="LinkedIn">
+                <img src="./css/images/linkedin-4-128.png" class="social" alt="LinkedIn">
             </a>
             <a href="./css/images/Jack's Resume_V4(2019).pdf" target="_blank">
-                <img src="./css/images/CV_Black.png" class="social" alt="Resume">
+                <img src="./css/images/Asset 3.png" class="social" alt="Resume">
             </a>
             <!-- <a href="https://www.instagram.com/jacksonstein/" target="_blank">
                 <img src="./css/images/instagram (1).png" class="social" alt="Instagram">
             </a> -->
         </section>
     </div>
-
-`   <br>
     <br>
     <br>
+    <br>
+    <br>
+    <br>
+    <br>
+</div>
 
     <a id="projects"></a>
     <div id="main-container" class="container">
@@ -93,8 +83,9 @@
             <div class="work0">
                 <div class="container cf">
                     <div class="animation-element slide-left testimonial">
-                        <a href="https://github.com/J91Branson/CyberMart" target="_blank">
-                            <img id="codeLink" src="./css/images/coding.png" height="60" alt="Source-Code">
+                        <a id="codeLink" href="https://github.com/J91Branson/CyberMart" target="_blank">
+                            <!-- <img id="codeLink" src="./css/images/coding.png" alt="Source-Code"> -->
+                            View code
                         </a>
                         <a href="http://pets-buy.herokuapp.com/" target="_blank">
                             <img id="work" src="./css/images/Pets-Buy.svg" height="400"
@@ -106,6 +97,13 @@
                                   <h6 class="card-text">A fully functional React.js eCommerce site for pet products web-scraped from the likes of PetCo and PetSmart. Sign up, search a product
                                       and make a purchase! (work in progess)
                                   </h6>
+                                  <div class="languages">
+                                    <img src="https://www.w3.org/html/logo/badge/html5-badge-h-css3-semantics.png" width="165" height="64" alt="HTML5 Powered with CSS3 / Styling, and Semantics" title="HTML5 Powered with CSS3 / Styling, and Semantics">
+                                    <img src= "./css/images/iconfinder_React.js_logo_1174949.svg" width= "100" height= "65" alt="React.js">
+                                    <img src= "./css/images/MongoDB_Logo_FullColorBlack_RGB.svg" width= "165" height= "64" alt="mongoDB">
+                                    <img src= "./css/images/Node_logo.svg" width= "165" height= "64" alt="Node.js">
+                                  </div>
+
                                 </div>
                               </div>
                     </div>
@@ -116,9 +114,9 @@
                 <div class="container cf">
                     <!-- project one -->
                     <div class="animation-element slide-left testimonial">
-                        <a href="https://github.com/jsstein1995/Meme" target="_blank">
-                            <img id="codeLink" src="./css/images/coding.png" height="60" alt="Source-Code">
-                            
+                        <a id="codeLink" href="https://github.com/jsstein1995/Meme"  target="_blank">
+                            <!-- <img id="codeLink" src="./css/images/coding.png" height="60" alt="Source-Code"> -->
+                            View code
                         </a>
                         <a href="https://memebd.herokuapp.com/" target="_blank">
                                 <img id="work" src="./css/images/MemeDB.svg" height="400"
@@ -127,7 +125,13 @@
                         <div class="card" style="width: 18rem;">
                                 <div class="card-body">
                                   <h5 class="card-title">MemeDB</h5>
-                                  <h6 class="card-text">A full-stack social meme page build with MongoDB and Express.js, where you can browse, 'like', and upload memes.</h6>
+                                  <h6 class="card-text">A full-stack social meme page build with MongoDB and Express.js, where you can browse, 'like', and upload memes.
+                                  </h6>
+                                  <div class="languages">
+                                        <img src="https://www.w3.org/html/logo/badge/html5-badge-h-css3-semantics.png" width="165" height="64" alt="HTML5 Powered with CSS3 / Styling, and Semantics" title="HTML5 Powered with CSS3 / Styling, and Semantics">
+                                        <img src= "./css/images/MongoDB_Logo_FullColorBlack_RGB.svg" width= "165" height= "64" alt="mongoDB">
+                                        <img src= "./css/images/Node_logo.svg" width= "165" height= "64" alt="Node.js">
+                                      </div>
                                 </div>
                               </div>
                     </div>
@@ -138,8 +142,9 @@
                 <div class="container cf">
                     <!-- project two -->
                     <div class="animation-element slide-left testimonial">
-                        <a href="https://github.com/jsstein1995/K-Stack-App" target="_blank">
-                            <img id="codeLink" src="./css/images/coding.png" height="60" alt="Source-Code">
+                        <a id="codeLink" href="https://github.com/jsstein1995/K-Stack-App" target="_blank">
+                            <!-- <img id="codeLink" src="./css/images/coding.png" height="60" alt="Source-Code"> -->
+                            View Code
                         </a>
                         <a href="https://jsstein1995.github.io/K-Stack-App/" target="_blank">
                             <img id="work" src="./css/images/Macbook Pro.svg" height="400"
@@ -179,14 +184,14 @@
                 <div class="container cf">
                     <!-- project one -->
                     <div class="animation-element slide-left testimonial">
-                        <div class="playMe"><a href="https://jsstein95.itch.io/boost-baron" target="_blank">
-                        </a>Play me!</div>
+                        <div id="playMe"><a href="https://jsstein95.itch.io/boost-baron" target="_blank">
+                        </a >Play me!</div>
                         <div class="boost-game">
                             <a href="https://jsstein95.itch.io/boost-baron" target="_blank">
                             </a>
                             <a href="https://jsstein95.itch.io/boost-baron" target="_blank">
-                                <img id="work" src="./css/images/boostbaron.png" height="300"
-                                    width="450" alt="GiphyAPIApp">
+                                <img id="work" src="./css/images/boostbaron.png" height="500"
+                                    width="700" alt="GiphyAPIApp">
                             </a>
                         </div>
                         <div class="card" style="width: 18rem;">
@@ -379,9 +384,6 @@
         </div>
     </div>
 
-<!-- Alertify.js -->
-<script src="//cdn.jsdelivr.net/npm/alertifyjs@1.11.4/build/alertify.min.js"></script>
-
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"
         integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script type="text/javascript" src='./javascript/javascript.js'></script>
@@ -389,7 +391,50 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.0.min.js"></script>
 
-
+    <!-- #### VANTA JS PLUGIN ### -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/100/three.min.js"></script>
+    <script src="https://www.vantajs.com/dist/vanta.birds.min.js"></script>
+    <script src="https://www.vantajs.com/dist/vanta.fog.min.js"></script>
+    <script src="https://www.vantajs.com/dist/vanta.waves.min.js"></script>
+    <!-- B. Instilize vanta js by #id selector change WAVES to BIRDS -->
+    <script> 
+    // VANTA.WAVES("#landing-background")
+    VANTA.BIRDS({
+    el: "#landing-background",
+    colorMode: "varianceGradient",
+    // backgroundColor: 0x7192f,
+    backgroundAlpha: 0.9,
+    backgroundColor: 0x3b7aed,
+    color1: 0xff0505,
+    color2: 0xffe100,
+    wingSpan: 30,
+    speedLimit: 3.5,
+    separation: 20,
+    alignment: 35.00,
+    cohesion: 24.00,
+    })
+    </script>
+    <!-- <script>
+            VANTA.WAVES({
+              el: "#landing-background",
+              shininess: 9.00,
+              waveHeight: 34.50,
+              waveSpeed: 1.70,
+              zoom: 0.71
+            })
+            </script> -->
+            <!-- <script>
+                    VANTA.FOG({
+                      el: "#landing-background",
+                      highlightColor: 0xf0fff,
+                    midtoneColor: 0xff1e1e,
+                    lowlightColor: 0x4969ff,
+                    baseColor: 0x7251a,
+                    blurFactor: 0.35,
+                    speed: 1.20,
+                    zoom: 1.30
+                    })
+                    </script> -->
 </body>
 
 </html>
