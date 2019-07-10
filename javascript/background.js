@@ -1,26 +1,32 @@
 var r = Math.floor(Math.random() * 255); 
 var g = Math.floor(Math.random() * 255); 
 var b = 255;
+var width = Math.floor(Math.random() * windowWidth);
+var height = Math.floor(Math.random() * 600);
 
 let bubbles = [];
 
 function setup() {
-  createCanvas(windowWidth, 5000);
+  createCanvas(windowWidth, 600);
+  for (let i = 0; i < 10; i++) {
+    let x = 10 + 30 * i;
+    bubbles[i] = new Bubble(x, 200, r);
+  }
 }
 
-function mousePressed() {
-  let r = random(30, 300);
-  let b = new Bubble(mouseX, mouseY, r);
-  bubbles.push(b);
-}
+// function mousePressed() {
+//   let r = random(30, 300);
+//   let b = new Bubble(mouseX, mouseY, r);
+//   bubbles.push(b);
+// }
 
 function draw() {
   background(255);
 
-  for (let bubble of bubbles) {
-    bubble.move();
-    bubble.show();
-  }
+  // for (let bubble of bubbles) {
+  //   bubble.move();
+  //   bubble.show();
+  // }
 
   for (let i = 0; i < bubbles.length; i++) {
     bubbles[i].move();
@@ -37,11 +43,14 @@ class Bubble {
 
   move() {
     this.x = this.x + 0.3;
-    
     if (this.x > width + this.r) {
       this.x = 0 - this.r;
     }
   }
+  // move() {
+//     this.x = this.x + noise(this.x) * 2;
+//     this.y = this.y + noise(this.y) * 2;
+//   }
 
   show() {
     noStroke();
@@ -50,6 +59,8 @@ class Bubble {
     ellipse(this.x, this.y, this.r * 2);
   }
 }
+
+
 
 // // All the paths
 // var paths = [];
