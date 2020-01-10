@@ -58,6 +58,7 @@ const navSlide = () => {
 
 navSlide();
 
+
 var $animation_elements = $('.animation-element');
 var $window = $(window);
 

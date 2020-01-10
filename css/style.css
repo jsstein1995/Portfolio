@@ -14,7 +14,7 @@ html {
     /* background-image: url("./images/IMG_0837.JPG"); */
     /* background-repeat: no-repeat;
   background-size: 100% 490px; */
-  background-color: rgb(255, 255, 255);
+  background-color: #eeeef7;
   background-size: 100% 2100px;
   background-repeat: no-repeat;
   }
@@ -65,19 +65,7 @@ html {
     background-color: transparent;
     text-align: center;
     font-size: 11px;
-  }
-  
-  /* end sticky footer styling */
-  
-  /* start hover styling */
-  
-  /* #logo:hover,
-  input[type=submit]:hover {
-    background: #5e7f7e;
-  } */
-  
-  
-  
+  }  
   .social:hover {
     cursor: pointer;
     transform: scale(1.1);
@@ -92,6 +80,7 @@ html {
     max-width: 960px;
     margin: 0 auto;
     clear: both;
+    margin-bottom: 80px;
   }
   
   h1,
@@ -152,24 +141,33 @@ html {
     background-color: transparent;
   }
   .logo {
-    margin-left: -50px;
+    margin-left: -100px;
   }
   .logo img {
     width: 75%;
     height: auto;
+    max-width: 25rem;
   }
   .nav-links {
+    position: relative;
+    top: -20px;
     display: flex;
     justify-content: space-around;
     width: 35%;
   }
   .nav-links li{
     list-style: none;
+    padding: .5rem;
+    padding-top: 0;
+    padding-bottom: 0;
+    border-radius: .3rem;
   }
   .nav-links li:hover{
     transform: scale(1.1);
+    background-color: rgba(255, 255, 255, 0.146);
   }
   .nav-links a{
+    color: white;
     text-decoration: none;
     letter-spacing: 3px;
     font-weight: bold;
@@ -257,6 +255,13 @@ html {
 
   a#back-end-link:hover {
     color: rgb(255, 200, 97);
+  }
+
+  .tableElement a:hover {
+    color: rgb(255, 200, 97);
+  }
+  td:hover {
+    cursor: pointer;
   }
 
   div.outer1 {
@@ -347,9 +352,14 @@ html {
   /* .playMe {
     color: rgb(49, 97, 255);
   } */
+  .playMe {
+    margin-left: -190px !important;
+  }
   
   img {
     border-radius: 10px;
+    max-width: 600px;
+    height: auto;
   }
    /* Projects Table Sections */
    #projects {
@@ -358,7 +368,7 @@ html {
   }
   
   #projects td, #projects th {
-    border: 1px solid #ddd;
+    border: 1px solid rgba(221, 221, 221, 0.201);
     padding: 8px;
   }
   
@@ -434,9 +444,9 @@ html {
   
   input[type=submit] {
     display: inline-block;
-    background-color: #1eb6ff; 
-    padding-bottom: 15px;
-    padding-top: 15px;
+    background-color: rgb(40, 40, 40); 
+    padding-bottom: 10px;
+    padding-top: 10px;
     padding-right: 20px;
     padding-left: 20px;
     margin-top: 30px;
@@ -444,8 +454,7 @@ html {
     font-size: 18px;
     color: white;
     cursor: pointer;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    border-radius: 35px;
+    border-radius: 10px;
   }
   input[type=submit]:hover {
     opacity: .8;
@@ -525,12 +534,12 @@ html {
   
   #welcome {
     color: white;
-    margin-top: 100px;
+    margin-top: 50px;
     margin-bottom: 40px;
     font-size: 60px;
     font-weight: bold;
     width: 100%;
-    letter-spacing: .5px;
+    letter-spacing: 6px;
   }
   
   /* .seeMore {
@@ -565,19 +574,20 @@ html {
   } */
   
   #codeLink {
-    background-color: #1eb6ff; 
+    /* background-color: #1eb6ff;  */
+    background-color: rgb(40, 40, 40);
     color: white;
     letter-spacing: 0.2;
     display: inline-block;
-    padding-bottom: 10px;
-    padding-top: 10px;
+    padding-bottom: 5px;
+    padding-top: 5px;
     padding-right: 20px;
     padding-left: 20px;
     margin-top: 150px;
     position: absolute;
-    margin-left: -250px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    border-radius: 35px;
+    margin-left: -150px;
+    /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
+    border-radius: 10px;
     width: 150px;
   }
   #codeLink:hover {
@@ -644,7 +654,6 @@ html {
       display: block;
     }
   }
-  
   .nav-active{
     transform: translateX(50%);
   }
@@ -657,35 +666,6 @@ html {
       display: none;
     }
   }
-
-  
-  /* .wrapper {
-    position: relative;
-    overflow: hidden;
-    width: 100px;
-    height: 100px; 
-  }
-  
-  #slide {
-    position: absolute;
-    right: -100px;
-    width: 100px;
-    height: 100px;
-    -webkit-animation: slide 0.5s forwards;
-    -webkit-animation-delay: 2s;
-    animation: slide 0.5s forwards;
-    animation-delay: 0.5s;
-  }
-  
-  @-webkit-keyframes slide {
-    100% { right: 0; }
-  }
-  
-  @keyframes slide {
-    100% { right: 0; }
-  } */
-  /* ================================================================== */
-  /*clearfixes*/
   
   .cf:before,
   .cf:after {
