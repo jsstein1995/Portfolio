@@ -28,6 +28,13 @@
         document.addEventListener('mousemove', e => {
             cursorPoint.setAttribute("style", "top: "+(e.pageY - 1)+"px; left: "+(e.pageX - 1)+"px;")
         })
+        document.addEventListener('click', () => {
+            cursor.classList.add("expand");
+
+            setTimeout(() => {
+                cursor.classList.remove("expand");
+            }, 500)
+        })
     </script>
 </body>
 </html>
