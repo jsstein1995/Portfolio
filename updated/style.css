@@ -8,10 +8,33 @@ body {
   padding: 0;
   height: 100vh;
   cursor: none;
+  background: white;
 }
 
 canvas {
   display: block;
+}
+
+.nav-links {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 90%;
+  min-height: 10vh;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: white;
+  margin: auto;
+  list-style-type: none;
+}
+
+.nav-links li {
+  padding: 1rem;
 }
 
 .landing.title {
@@ -19,122 +42,68 @@ canvas {
 }
 
 .cursor {
-  width: 20px;
-  height: 20px;
-  background-color: transparent;
-  border: 1px solid black;
+  width: 1.5rem;
+  height: 1.5rem;
+  border: 2px solid white;
   border-radius: 50%;
   position: absolute;
-  -webkit-transition-duration: 300ms;
-          transition-duration: 300ms;
-  -webkit-transition-timing-function: ease-in-out;
-          transition-timing-function: ease-in-out;
-  -webkit-animation: cursorAnim .5s infinite alternate;
-          animation: cursorAnim .5s infinite alternate;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   pointer-events: none;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  -webkit-transition-property: background, -webkit-transform;
+  transition-property: background, -webkit-transform;
+  transition-property: background, transform;
+  transition-property: background, transform, -webkit-transform;
+  -webkit-transform-origin: 100% 100%;
+          transform-origin: 100% 100%;
 }
 
 .cursorPoint {
-  width: 4px;
-  height: 4px;
-  background-color: black;
+  width: .5rem;
+  height: .5rem;
+  background-color: white;
   border-radius: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  pointer-events: none;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  -webkit-transition-property: background, -webkit-transform;
+  transition-property: background, -webkit-transform;
+  transition-property: background, transform;
+  transition-property: background, transform, -webkit-transform;
   position: absolute;
 }
 
-.cursor::after {
-  content: "";
-  width: 20px;
-  height: 20px;
-  position: absolute;
-  border: 8px solid gray;
+#ball {
+  width: 2.5rem;
+  height: 2.5rem;
+  background: none;
+  border: 1px solid white;
   border-radius: 50%;
-  opacity: .5;
-  top: -8px;
-  left: -8px;
-  -webkit-animation: cursorAnim2 .5s infinite alternate;
-          animation: cursorAnim2 .5s infinite alternate;
+  position: absolute;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
+  pointer-events: none;
 }
 
-@-webkit-keyframes cursorAnim {
-  from {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-  }
-  to {
-    -webkit-transform: scale(0.7);
-            transform: scale(0.7);
-  }
+.link-grow {
+  -webkit-transform: scale(8);
+          transform: scale(8);
+  background: white;
+  opacity: .9;
 }
 
-@keyframes cursorAnim {
-  from {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-  }
-  to {
-    -webkit-transform: scale(0.7);
-            transform: scale(0.7);
-  }
+.hovered-link {
+  color: #d10069;
+  z-index: 3;
 }
 
-@-webkit-keyframes cursorAnim2 {
-  from {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-  }
-  to {
-    -webkit-transform: scale(0.4);
-            transform: scale(0.4);
-  }
-}
-
-@keyframes cursorAnim2 {
-  from {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-  }
-  to {
-    -webkit-transform: scale(0.4);
-            transform: scale(0.4);
-  }
-}
-
-@-webkit-keyframes cursorAnim3 {
-  0% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-  }
-  50% {
-    -webkit-transform: scale(3);
-            transform: scale(3);
-  }
-  100% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-    opacity: 0;
-  }
-}
-
-@keyframes cursorAnim3 {
-  0% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-  }
-  50% {
-    -webkit-transform: scale(3);
-            transform: scale(3);
-  }
-  100% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-    opacity: 0;
-  }
-}
-
-.expand {
-  -webkit-animation: cursorAnim3 .5s forwards;
-          animation: cursorAnim3 .5s forwards;
-  border: 1px solid red;
+.hovered-link-point {
+  display: none;
 }
 /*# sourceMappingURL=style.css.map */
