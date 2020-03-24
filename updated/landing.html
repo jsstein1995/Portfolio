@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/png" href="../2x/fav2@2x.png">
+    <title>Landing</title>
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.6/p5.js"></script>
+    <script src="sketch.js"></script>
+
+</head>
+<body>
+    <div class="cursor"></div>
+    <div class="cursorPoint"></div>
+    <div class="landing title">
+        Landing Page
+    </div>
+
+    <script>
+        const cursor = document.querySelector('.cursor');
+        document.addEventListener('mousemove', e => {
+            cursor.setAttribute("style", "top: "+(e.pageY- 10)+"px; left: "+(e.pageX - 10)+"px;")
+        })
+        const cursorPoint = document.querySelector('.cursorPoint');
+        document.addEventListener('mousemove', e => {
+            cursorPoint.setAttribute("style", "top: "+(e.pageY - 1)+"px; left: "+(e.pageX - 1)+"px;")
+        })
+    </script>
+</body>
+</html>

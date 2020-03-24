@@ -1,0 +1,45 @@
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  cursor: none;
+}
+
+canvas {
+  display: block;
+}
+
+.landing.title {
+  position: absolute;
+}
+
+.cursor {
+  width: 20px;
+  height: 20px;
+  background-color: transparent;
+  border: 1px solid black;
+  border-radius: 50%;
+  position: absolute;
+  -webkit-transition-duration: 200ms;
+          transition-duration: 200ms;
+  -webkit-transition-timing-function: ease-out;
+          transition-timing-function: ease-out;
+}
+
+.cursorPoint {
+  width: 4px;
+  height: 4px;
+  background-color: black;
+  border-radius: 50%;
+  position: absolute;
+  -webkit-transition-duration: 100ms;
+          transition-duration: 100ms;
+  -webkit-transition-timing-function: ease-out;
+          transition-timing-function: ease-out;
+}
+/*# sourceMappingURL=style.css.map */
