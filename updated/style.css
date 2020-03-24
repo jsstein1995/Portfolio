@@ -25,8 +25,8 @@ canvas {
   border: 1px solid black;
   border-radius: 50%;
   position: absolute;
-  -webkit-transition-duration: 200ms;
-          transition-duration: 200ms;
+  -webkit-transition-duration: 300ms;
+          transition-duration: 300ms;
   -webkit-transition-timing-function: ease-out;
           transition-timing-function: ease-out;
 }
@@ -39,7 +39,7 @@ canvas {
   position: absolute;
   -webkit-transition-duration: 100ms;
           transition-duration: 100ms;
-  -webkit-transition-timing-function: ease-out;
-          transition-timing-function: ease-out;
+  -webkit-transition-timing-function: ease-in;
+          transition-timing-function: ease-in;
 }
 /*# sourceMappingURL=style.css.map */

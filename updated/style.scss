@@ -20,7 +20,7 @@ canvas {
       border: 1px solid black;
       border-radius: 50%;
       position: absolute;
-      transition-duration: 200ms;
+      transition-duration: 300ms;
       transition-timing-function: ease-out;
   }
   .cursorPoint {
@@ -30,5 +30,5 @@ canvas {
     border-radius: 50%;
     position: absolute;
     transition-duration: 100ms;
-      transition-timing-function: ease-out;
+      transition-timing-function: ease-in;
 }
