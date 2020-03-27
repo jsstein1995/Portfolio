@@ -68,7 +68,7 @@ navLinks.forEach(links => {
 
 function setup() {
     createCanvas(windowWidth, windowHeight);
-    background(0, 0, 10);
+    background(0, 119, 255);
   }
 
 function windowResized() {

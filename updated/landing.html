@@ -6,16 +6,22 @@
     <link rel="shortcut icon" type="image/png" href="../2x/fav2@2x.png">
     <title>Jackson Stein</title>
     <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body onload = "followMouse();">
     <div class="cursor" id="ball"></div>
     <div class="cursorPoint"></div>
     <div id="app">
+        <div class=lightMode>  
+            <div>Light Mode</div>
+            <span class="material-icons">nights_stay</span>
+            <span class="material-icons">wb_sunny</span>
+        </div>
         <nav>
             <div class='navContainer'>
                 <ul class='nav-links'>
                     <li>Contact</li>
-                    <li><img class='logo' src="assets/fixed@4x.png" alt="Logo"></li>
+                    <li><img class='logo' src="assets/personalLogo.gif" alt="Logo"></li>
                     <li class='portfolioLink'
                         @mouseover="displayText = true">Portfolio
                         <img class='rightArrow' src="assets/arrow@3x.png" alt="Logo">

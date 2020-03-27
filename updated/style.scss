@@ -6,17 +6,25 @@ body {
     margin: 0;
     padding: 0; 
     height: 100vh;
-    background: black;
+    background: rgb(0, 119, 255);
     overflow-x: hidden;
 }
 canvas {
     display: block;
 }
 .logo {
-    max-width: 8rem;
-    // border: 1px solid white;
-    // padding: 6rem 3.5rem;
-    // border-radius: 50%;
+    max-width: 10rem;
+    user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -o-user-select: none;
+}
+.lightMode {
+    color: white;
+}
+.material-icons {
+    color: white;
 }
 .navContainer {
     position: relative;
@@ -39,6 +47,9 @@ canvas {
     font-weight: 800;
     letter-spacing: .05rem;
     z-index: 10;
+}
+.lightMode {
+    position: absolute;
 }
 .rightArrow {
     position: absolute;
@@ -119,9 +130,9 @@ canvas {
     align-items: center;
     padding: 2rem;
     top: 8rem;
-    left: 20rem;
+    left: 30rem;
         //animation
-    animation: moveText 4s;
+    animation: moveText 3s;
     animation-timing-function: ease-out;
     animation-fill-mode: both;
     user-select: none;
@@ -129,6 +140,30 @@ canvas {
     -khtml-user-select: none;
     -webkit-user-select: none;
     -o-user-select: none;
+}
+.animatedText > div > span {
+    animation: colorText 1s;
+    // animation-delay: .2s;
+    animation-fill-mode: both;
+    user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -o-user-select: none;
+}
+@keyframes colorText {
+    0% {
+        color: rgb(255, 145, 1);
+    }
+    60% {
+        color: rgb(255, 145, 1);
+    }
+    80% {
+        color: rgb(0, 225, 255);
+    }
+    100% {
+        color: white;
+    }
 }
 .animatedText.bio {
     top: -2rem;
@@ -143,7 +178,6 @@ canvas {
     -webkit-user-select: none;
     -o-user-select: none;
 }
-
 @keyframes moveText {
     0% {
         transform: translateX(0);
@@ -163,12 +197,12 @@ canvas {
 .textHideBoxes {
     height: 15rem;
     width: 15rem;
-    background-color: rgb(0, 0, 10);
+    background-color: rgb(0, 119, 255);
     display: inline-block;
     position: absolute;
     left: 0;
     bottom: 0;
-    animation: boxes 2s;
+    animation: boxes 1.8s;
     animation-fill-mode: both;
     animation-timing-function: ease-out;
 }

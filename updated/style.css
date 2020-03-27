@@ -8,7 +8,7 @@ body {
   margin: 0;
   padding: 0;
   height: 100vh;
-  background: black;
+  background: #0077ff;
   overflow-x: hidden;
 }
 
@@ -17,7 +17,21 @@ canvas {
 }
 
 .logo {
-  max-width: 8rem;
+  max-width: 10rem;
+  -ms-user-select: none;
+      user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -o-user-select: none;
+}
+
+.lightMode {
+  color: white;
+}
+
+.material-icons {
+  color: white;
 }
 
 .navContainer {
@@ -49,6 +63,10 @@ canvas {
   font-weight: 800;
   letter-spacing: .05rem;
   z-index: 10;
+}
+
+.lightMode {
+  position: absolute;
 }
 
 .rightArrow {
@@ -160,9 +178,9 @@ canvas {
           align-items: center;
   padding: 2rem;
   top: 8rem;
-  left: 20rem;
-  -webkit-animation: moveText 4s;
-          animation: moveText 4s;
+  left: 30rem;
+  -webkit-animation: moveText 3s;
+          animation: moveText 3s;
   -webkit-animation-timing-function: ease-out;
           animation-timing-function: ease-out;
   -webkit-animation-fill-mode: both;
@@ -173,6 +191,49 @@ canvas {
   -khtml-user-select: none;
   -webkit-user-select: none;
   -o-user-select: none;
+}
+
+.animatedText > div > span {
+  -webkit-animation: colorText 1s;
+          animation: colorText 1s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+  -ms-user-select: none;
+      user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -o-user-select: none;
+}
+
+@-webkit-keyframes colorText {
+  0% {
+    color: #ff9101;
+  }
+  60% {
+    color: #ff9101;
+  }
+  80% {
+    color: #00e1ff;
+  }
+  100% {
+    color: white;
+  }
+}
+
+@keyframes colorText {
+  0% {
+    color: #ff9101;
+  }
+  60% {
+    color: #ff9101;
+  }
+  80% {
+    color: #00e1ff;
+  }
+  100% {
+    color: white;
+  }
 }
 
 .animatedText.bio {
@@ -239,13 +300,13 @@ canvas {
 .textHideBoxes {
   height: 15rem;
   width: 15rem;
-  background-color: #00000a;
+  background-color: #0077ff;
   display: inline-block;
   position: absolute;
   left: 0;
   bottom: 0;
-  -webkit-animation: boxes 2s;
-          animation: boxes 2s;
+  -webkit-animation: boxes 1.8s;
+          animation: boxes 1.8s;
   -webkit-animation-fill-mode: both;
           animation-fill-mode: both;
   -webkit-animation-timing-function: ease-out;
