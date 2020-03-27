@@ -4,87 +4,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" type="image/png" href="../2x/fav2@2x.png">
-    <title>Landing</title>
-
+    <title>Jackson Stein</title>
     <link rel="stylesheet" type="text/css" href="style.css">
-
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.6/p5.js"></script>
-    
-
 </head>
 <body onload = "followMouse();">
-    <div id="app">
     <div class="cursor" id="ball"></div>
     <div class="cursorPoint"></div>
-    <nav>
-        <ul class='nav-links'>
-            <li>Home</li>
-            <li>Work</li>
-            <li>Servics</li>
-        </ul>
-    </nav>
-
-    <div class="animatedText"> 
-        <!-- <div class="letterContainer">
-            <span class="letters">JACKSON STEIN</span>
-            <div class="textHideBoxes" ></div>
-        </div> -->
-        <div class="letterContainer">
-            <span class="letters">J</span>
-            <div class="textHideBoxes" ></div>
+    <div id="app">
+        <nav>
+            <div class='navContainer'>
+                <ul class='nav-links'>
+                    <li>Contact</li>
+                    <li><img class='logo' src="assets/fixed@4x.png" alt="Logo"></li>
+                    <li class='portfolioLink'
+                        @mouseover="displayText = true">Portfolio
+                        <img class='rightArrow' src="assets/arrow@3x.png" alt="Logo">
+                    </li>
+                </ul>
+            </div>  
+        </nav>
+        <div v-if='displayText' class="animatedText bio">
+            <div class="letterContainer"
+            v-for='(letter, index) in bioLetters'>
+                <span class="letters bio">{{letter}}</span>
+                <div class="textHideBoxes" ></div>
+            </div>
         </div>
-        <div class="letterContainer">
-            <span class="letters">A</span>
-            <div class="textHideBoxes" ></div>
-        </div>
-        <div class="letterContainer">
-            <span class="letters">C</span>
-            <div class="textHideBoxes" ></div>
-        </div>
-        <div class="letterContainer">
-            <span class="letters">K</span>
-            <div class="textHideBoxes" ></div>
-        </div>
-        <div class="letterContainer">
-            <span class="letters">S</span>
-            <div class="textHideBoxes" ></div>
-        </div>
-        <div class="letterContainer">
-            <span class="letters">O</span>
-            <div class="textHideBoxes" ></div>
-        </div>
-        <div class="letterContainer">
-            <span class="letters">N</span>
-            <div class="textHideBoxes" ></div>
-        </div>
-        <div class="letterContainer">
-            <span class="letters">&nbsp</span>
-            <div class="textHideBoxes" ></div>
-        </div>
-        <div class="letterContainer">
-            <span class="letters">S</span>
-            <div class="textHideBoxes" ></div>
-        </div>
-        <div class="letterContainer">
-            <span class="letters">T</span>
-            <div class="textHideBoxes" ></div>
-        </div>
-        <div class="letterContainer">
-            <span class="letters">E</span>
-            <div class="textHideBoxes" ></div>
-        </div>
-        <div class="letterContainer">
-            <span class="letters">I</span>
-            <div class="textHideBoxes" ></div>
-        </div>
-        <div class="letterContainer">
-            <span class="letters">N</span>
-            <div class="textHideBoxes" ></div>
+        <div v-if='displayText' class="animatedText"> 
+            <div class="letterContainer"
+            v-for='(letter, index) in letters'>
+                <span class="letters">{{letter}}</span>
+                <div class="textHideBoxes" ></div>
+            </div>
         </div>
     </div>
-</div>
 </body>
 </html>
-
+<script src="http://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.6/p5.js"></script>
+<script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 <script src="sketch.js"></script>

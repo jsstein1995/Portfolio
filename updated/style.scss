@@ -6,11 +6,20 @@ body {
     margin: 0;
     padding: 0; 
     height: 100vh;
-    cursor: none;
     background: black;
+    overflow-x: hidden;
 }
 canvas {
     display: block;
+}
+.logo {
+    max-width: 8rem;
+    border: 1px solid white;
+    padding: 6rem 3.5rem;
+    border-radius: 50%;
+}
+.navContainer {
+    position: relative;
 }
 .nav-links {
     position: absolute;
@@ -18,6 +27,8 @@ canvas {
     justify-content: space-between;
     width: 90%;
     min-height: 10vh;
+    height: 100vh;
+    top: -4rem;
     align-items: center;
     color: white;
     margin: auto;
@@ -25,10 +36,19 @@ canvas {
 }
 .nav-links li {
     padding: 1rem;
+    font-weight: 800;
+    letter-spacing: .05rem;
+    z-index: 10;
 }
-.landing.title {
-      position: absolute;
-  }
+.rightArrow {
+    position: absolute;
+    left: 0rem;
+    top: .25rem;
+    height: 4rem;
+}
+.portfolioLink {
+    position: relative;
+}
 .cursor {
     width: 1.5rem;
     height: 1.5rem;
@@ -70,7 +90,7 @@ canvas {
 .link-grow {
     transform: scale(8);
     background: white;
-    opacity: .9;
+    opacity: .4;
 }
 .hovered-link {
     color:  rgb(209, 0, 105);
@@ -84,6 +104,12 @@ canvas {
     font-size: 15rem;
     font-weight: 500;
 }
+.letters.bio {
+    font-size: 6rem;
+}
+.letterContainer {
+    position: relative;
+}
 .animatedText {
     width: 100%;
     height: 100%;
@@ -92,12 +118,23 @@ canvas {
     justify-content: center;
     align-items: center;
     padding: 2rem;
+    top: 8rem;
+    left: 20rem;
+        //animation
+    animation: moveText 4s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: both;
+    user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -o-user-select: none;
 }
-.letterContainer {
-    position: relative;
-}
-.animatedText {
-    animation: moveText 5s;
+.animatedText.bio {
+    top: -2rem;
+    left: 60rem;
+        //animation
+    animation: moveBioText 4s;
     animation-timing-function: ease-out;
     animation-fill-mode: both;
     user-select: none;
@@ -112,7 +149,15 @@ canvas {
         transform: translateX(0);
     }
     100% {
-        transform: translateX(-20rem);
+        transform: translateX(-40rem);
+    }
+}
+@keyframes moveBioText {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-80rem);
     }
 }
 .textHideBoxes {
@@ -123,7 +168,7 @@ canvas {
     position: absolute;
     left: 0;
     bottom: 0;
-    animation: boxes 1.5s;
+    animation: boxes 2s;
     animation-fill-mode: both;
     animation-timing-function: ease-out;
 }

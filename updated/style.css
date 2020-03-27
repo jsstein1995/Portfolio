@@ -8,12 +8,23 @@ body {
   margin: 0;
   padding: 0;
   height: 100vh;
-  cursor: none;
   background: black;
+  overflow-x: hidden;
 }
 
 canvas {
   display: block;
+}
+
+.logo {
+  max-width: 8rem;
+  border: 1px solid white;
+  padding: 6rem 3.5rem;
+  border-radius: 50%;
+}
+
+.navContainer {
+  position: relative;
 }
 
 .nav-links {
@@ -26,6 +37,8 @@ canvas {
           justify-content: space-between;
   width: 90%;
   min-height: 10vh;
+  height: 100vh;
+  top: -4rem;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -36,10 +49,20 @@ canvas {
 
 .nav-links li {
   padding: 1rem;
+  font-weight: 800;
+  letter-spacing: .05rem;
+  z-index: 10;
 }
 
-.landing.title {
+.rightArrow {
   position: absolute;
+  left: 0rem;
+  top: .25rem;
+  height: 4rem;
+}
+
+.portfolioLink {
+  position: relative;
 }
 
 .cursor {
@@ -99,7 +122,7 @@ canvas {
   -webkit-transform: scale(8);
           transform: scale(8);
   background: white;
-  opacity: .9;
+  opacity: .4;
 }
 
 .hovered-link {
@@ -117,6 +140,14 @@ canvas {
   font-weight: 500;
 }
 
+.letters.bio {
+  font-size: 6rem;
+}
+
+.letterContainer {
+  position: relative;
+}
+
 .animatedText {
   width: 100%;
   height: 100%;
@@ -131,15 +162,27 @@ canvas {
       -ms-flex-align: center;
           align-items: center;
   padding: 2rem;
+  top: 8rem;
+  left: 20rem;
+  -webkit-animation: moveText 4s;
+          animation: moveText 4s;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+  -ms-user-select: none;
+      user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -o-user-select: none;
 }
 
-.letterContainer {
-  position: relative;
-}
-
-.animatedText {
-  -webkit-animation: moveText 5s;
-          animation: moveText 5s;
+.animatedText.bio {
+  top: -2rem;
+  left: 60rem;
+  -webkit-animation: moveBioText 4s;
+          animation: moveBioText 4s;
   -webkit-animation-timing-function: ease-out;
           animation-timing-function: ease-out;
   -webkit-animation-fill-mode: both;
@@ -158,8 +201,8 @@ canvas {
             transform: translateX(0);
   }
   100% {
-    -webkit-transform: translateX(-20rem);
-            transform: translateX(-20rem);
+    -webkit-transform: translateX(-40rem);
+            transform: translateX(-40rem);
   }
 }
 
@@ -169,8 +212,30 @@ canvas {
             transform: translateX(0);
   }
   100% {
-    -webkit-transform: translateX(-20rem);
-            transform: translateX(-20rem);
+    -webkit-transform: translateX(-40rem);
+            transform: translateX(-40rem);
+  }
+}
+
+@-webkit-keyframes moveBioText {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(-80rem);
+            transform: translateX(-80rem);
+  }
+}
+
+@keyframes moveBioText {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(-80rem);
+            transform: translateX(-80rem);
   }
 }
 
@@ -182,8 +247,8 @@ canvas {
   position: absolute;
   left: 0;
   bottom: 0;
-  -webkit-animation: boxes 1.5s;
-          animation: boxes 1.5s;
+  -webkit-animation: boxes 2s;
+          animation: boxes 2s;
   -webkit-animation-fill-mode: both;
           animation-fill-mode: both;
   -webkit-animation-timing-function: ease-out;
