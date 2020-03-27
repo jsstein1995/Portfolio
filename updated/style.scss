@@ -1,12 +1,13 @@
 html {
     box-sizing: border-box;
+    font-family: Roboto, sans-serif;
   }
 body {
     margin: 0;
     padding: 0; 
     height: 100vh;
     cursor: none;
-    background: white;
+    background: black;
 }
 canvas {
     display: block;
@@ -39,6 +40,7 @@ canvas {
     transition: all 0.3s ease;
     transition-property: background, transform;
     transform-origin: 100% 100%;
+    z-index: 10;
 }
 .cursorPoint {
     width: .5rem;
@@ -50,6 +52,7 @@ canvas {
     transition: all 0.3s ease;
     transition-property: background, transform;
     position: absolute;
+    z-index: 10;
 }
 #ball {
     width: 2.5rem;
@@ -62,6 +65,7 @@ canvas {
     left: 50%;
     top: 50%;
     pointer-events: none;
+    z-index: 10;
 }
 .link-grow {
     transform: scale(8);
@@ -74,4 +78,65 @@ canvas {
 }
 .hovered-link-point {
     display: none;
+}
+.letters {
+    color: white;
+    font-size: 15rem;
+    font-weight: 500;
+}
+.animatedText {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+.letterContainer {
+    position: relative;
+}
+.animatedText {
+    animation: moveText 5s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: both;
+    user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -o-user-select: none;
+}
+
+@keyframes moveText {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-20rem);
+    }
+}
+.textHideBoxes {
+    height: 15rem;
+    width: 15rem;
+    background-color: rgb(0, 0, 10);
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    animation: boxes 1.5s;
+    animation-fill-mode: both;
+    animation-timing-function: ease-out;
+}
+.textHideBoxes:hover {
+    width: 0rem;
+}
+
+@keyframes boxes {
+    0% {
+        width: 100%;
+    }
+    100% {
+        width: 0%;
+        display: none;
+    }
 }
