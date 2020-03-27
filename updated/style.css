@@ -18,9 +18,6 @@ canvas {
 
 .logo {
   max-width: 8rem;
-  border: 1px solid white;
-  padding: 6rem 3.5rem;
-  border-radius: 50%;
 }
 
 .navContainer {
