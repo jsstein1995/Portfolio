@@ -8,8 +8,9 @@ body {
   margin: 0;
   padding: 0;
   height: 100vh;
-  background: #0077ff;
+  background: #000b18;
   overflow-x: hidden;
+  cursor: none;
 }
 
 canvas {
@@ -28,6 +29,55 @@ canvas {
 
 .lightMode {
   color: white;
+}
+
+.loadingGif {
+  position: fixed;
+  z-index: 99;
+  -webkit-transform: scale(0.3);
+          transform: scale(0.3);
+}
+
+.loader {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 50;
+}
+
+.loader.hidden {
+  -webkit-animation: loaded 2s;
+          animation: loaded 2s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes loaded {
+  0% {
+    top: 0;
+  }
+  100% {
+    top: -70rem;
+  }
+}
+
+@keyframes loaded {
+  0% {
+    top: 0;
+  }
+  100% {
+    top: -70rem;
+  }
 }
 
 .material-icons {

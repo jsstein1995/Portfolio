@@ -65,7 +65,7 @@ navLinks.forEach(links => {
     links.classList.add('hovered-link');
   });
 });
-
+    //CANVAS ====================================
 function setup() {
     createCanvas(windowWidth, windowHeight);
     background(0, 119, 255);
@@ -92,7 +92,6 @@ var app = new Vue({
     splitBio: function () {
       var text = this.bio.toUpperCase().split('');
       this.bioLetters = text;
-      console.log(this.bioLetters)
     }
   },
   mounted () {
@@ -100,3 +99,14 @@ var app = new Vue({
     this.splitBio();
   }
 })
+//  Loader JS --  =======================
+window.addEventListener("load", function() {
+  const loader = $('.loader');
+  loader.className += " hidden";
+});
+
+// To Do:s 
+  // fix cursor bubble
+  //rewrite loader in Vue
+  //Contact Page = Vue
+  //make custom loading gif

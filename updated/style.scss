@@ -6,8 +6,9 @@ body {
     margin: 0;
     padding: 0; 
     height: 100vh;
-    background: rgb(0, 119, 255);
+    background: rgb(0, 11, 24);
     overflow-x: hidden;
+    cursor: none;
 }
 canvas {
     display: block;
@@ -22,6 +23,33 @@ canvas {
 }
 .lightMode {
     color: white;
+}
+.loadingGif {
+    position: fixed;
+    z-index: 99;
+    transform: scale(.3);
+}
+.loader {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 50;
+}
+.loader.hidden {
+    animation: loaded 2s;
+    animation-fill-mode: forwards;
+}
+@keyframes loaded {
+    0% {
+        top: 0;
+    }
+    100% {
+        top: -70rem;
+    }
 }
 .material-icons {
     color: white;
