@@ -65,7 +65,7 @@ navLinks.forEach(links => {
     links.classList.add('hovered-link');
   });
 });
-    //CANVAS ====================================
+//    CANVAS ====================================
 function setup() {
     createCanvas(windowWidth, windowHeight);
     background(0, 119, 255);
@@ -110,3 +110,4 @@ window.addEventListener("load", function() {
   //rewrite loader in Vue
   //Contact Page = Vue
   //make custom loading gif
+  //imbed rocket game in website

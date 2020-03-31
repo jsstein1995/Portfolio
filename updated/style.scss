@@ -13,6 +13,7 @@ body {
 canvas {
     display: block;
 }
+
 .logo {
     max-width: 10rem;
     user-select: none;
@@ -42,6 +43,7 @@ canvas {
 .loader.hidden {
     animation: loaded 2s;
     animation-fill-mode: forwards;
+    animation-delay: 2s;
 }
 @keyframes loaded {
     0% {
