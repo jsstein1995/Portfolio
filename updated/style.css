@@ -8,12 +8,86 @@ body {
   margin: 0;
   padding: 0;
   height: 100vh;
+  background: #000b18;
+  overflow-x: hidden;
   cursor: none;
-  background: black;
 }
 
 canvas {
   display: block;
+}
+
+.logo {
+  max-width: 10rem;
+  -ms-user-select: none;
+      user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -o-user-select: none;
+}
+
+.lightMode {
+  color: white;
+}
+
+.loadingGif {
+  position: fixed;
+  z-index: 99;
+  -webkit-transform: scale(0.3);
+          transform: scale(0.3);
+}
+
+.loader {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 50;
+}
+
+.loader.hidden {
+  -webkit-animation: loaded 2s;
+          animation: loaded 2s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+}
+
+@-webkit-keyframes loaded {
+  0% {
+    top: 0;
+  }
+  100% {
+    top: -70rem;
+  }
+}
+
+@keyframes loaded {
+  0% {
+    top: 0;
+  }
+  100% {
+    top: -70rem;
+  }
+}
+
+.material-icons {
+  color: white;
+}
+
+.navContainer {
+  position: relative;
 }
 
 .nav-links {
@@ -26,6 +100,8 @@ canvas {
           justify-content: space-between;
   width: 90%;
   min-height: 10vh;
+  height: 100vh;
+  top: -4rem;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -36,10 +112,24 @@ canvas {
 
 .nav-links li {
   padding: 1rem;
+  font-weight: 800;
+  letter-spacing: .05rem;
+  z-index: 10;
 }
 
-.landing.title {
+.lightMode {
   position: absolute;
+}
+
+.rightArrow {
+  position: absolute;
+  left: 0rem;
+  top: .25rem;
+  height: 4rem;
+}
+
+.portfolioLink {
+  position: relative;
 }
 
 .cursor {
@@ -99,7 +189,7 @@ canvas {
   -webkit-transform: scale(8);
           transform: scale(8);
   background: white;
-  opacity: .9;
+  opacity: .4;
 }
 
 .hovered-link {
@@ -117,6 +207,14 @@ canvas {
   font-weight: 500;
 }
 
+.letters.bio {
+  font-size: 6rem;
+}
+
+.letterContainer {
+  position: relative;
+}
+
 .animatedText {
   width: 100%;
   height: 100%;
@@ -131,15 +229,70 @@ canvas {
       -ms-flex-align: center;
           align-items: center;
   padding: 2rem;
+  top: 8rem;
+  left: 30rem;
+  -webkit-animation: moveText 3s;
+          animation: moveText 3s;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+  -ms-user-select: none;
+      user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -o-user-select: none;
 }
 
-.letterContainer {
-  position: relative;
+.animatedText > div > span {
+  -webkit-animation: colorText 1s;
+          animation: colorText 1s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+  -ms-user-select: none;
+      user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -o-user-select: none;
 }
 
-.animatedText {
-  -webkit-animation: moveText 5s;
-          animation: moveText 5s;
+@-webkit-keyframes colorText {
+  0% {
+    color: #ff9101;
+  }
+  60% {
+    color: #ff9101;
+  }
+  80% {
+    color: #00e1ff;
+  }
+  100% {
+    color: white;
+  }
+}
+
+@keyframes colorText {
+  0% {
+    color: #ff9101;
+  }
+  60% {
+    color: #ff9101;
+  }
+  80% {
+    color: #00e1ff;
+  }
+  100% {
+    color: white;
+  }
+}
+
+.animatedText.bio {
+  top: -2rem;
+  left: 60rem;
+  -webkit-animation: moveBioText 4s;
+          animation: moveBioText 4s;
   -webkit-animation-timing-function: ease-out;
           animation-timing-function: ease-out;
   -webkit-animation-fill-mode: both;
@@ -158,8 +311,8 @@ canvas {
             transform: translateX(0);
   }
   100% {
-    -webkit-transform: translateX(-20rem);
-            transform: translateX(-20rem);
+    -webkit-transform: translateX(-40rem);
+            transform: translateX(-40rem);
   }
 }
 
@@ -169,21 +322,43 @@ canvas {
             transform: translateX(0);
   }
   100% {
-    -webkit-transform: translateX(-20rem);
-            transform: translateX(-20rem);
+    -webkit-transform: translateX(-40rem);
+            transform: translateX(-40rem);
+  }
+}
+
+@-webkit-keyframes moveBioText {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(-80rem);
+            transform: translateX(-80rem);
+  }
+}
+
+@keyframes moveBioText {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(-80rem);
+            transform: translateX(-80rem);
   }
 }
 
 .textHideBoxes {
   height: 15rem;
   width: 15rem;
-  background-color: #00000a;
+  background-color: #0077ff;
   display: inline-block;
   position: absolute;
   left: 0;
   bottom: 0;
-  -webkit-animation: boxes 1.5s;
-          animation: boxes 1.5s;
+  -webkit-animation: boxes 1.8s;
+          animation: boxes 1.8s;
   -webkit-animation-fill-mode: both;
           animation-fill-mode: both;
   -webkit-animation-timing-function: ease-out;

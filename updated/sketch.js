@@ -65,28 +65,49 @@ navLinks.forEach(links => {
     links.classList.add('hovered-link');
   });
 });
+//    CANVAS ====================================
+function setup() {
+    createCanvas(windowWidth, windowHeight);
+    background(0, 119, 255);
+  }
 
-// function setup() {
-//     createCanvas(windowWidth, windowHeight);
-//     background(0, 0, 10);
-//   }
+function windowResized() {
+  resizeCanvas(windowWidth, windowHeight);
+}
 
-// function windowResized() {
-//   resizeCanvas(windowWidth, windowHeight);
-// }
+var app = new Vue({
+  el:'#app',
+  data: {
+    name: 'Jackson.Stein',
+    bio: 'Front-End.Developer./.UI.Designer',
+    letters: [],
+    bioLetters: [],
+    displayText: false
+  },
+  methods: {
+    splitName: function () {
+      var text = this.name.toUpperCase().split('');
+      this.letters = text;
+    },
+    splitBio: function () {
+      var text = this.bio.toUpperCase().split('');
+      this.bioLetters = text;
+    }
+  },
+  mounted () {
+    this.splitName();
+    this.splitBio();
+  }
+})
+//  Loader JS --  =======================
+window.addEventListener("load", function() {
+  const loader = $('.loader');
+  loader.className += " hidden";
+});
 
-//split text for animation
-
-// const text = 'JACKSON STEIN'
-// const splitText = strText.split('');
-
-// for (let i = 0; i < splitText.length; i++) {
-//   text.innerHTML += '<span>' + splitText[i] + '</span>'
-// }
-
-// var app = new Vue({
-//   el:'#app',
-//   data: {
-//     message: 'Hello Vue!'
-//   }
-// })
+// To Do:s 
+  // fix cursor bubble
+  //rewrite loader in Vue
+  //Contact Page = Vue
+  //make custom loading gif
+  //imbed rocket game in website
